@@ -11,7 +11,7 @@ pipeline{
             steps {
                 bat '''
                 pythom -m venv venv
-                call venv\Scripts\activate
+                call venv/Scripts/activate
                 pip install -r requirements.txt
                 '''
             }
@@ -20,7 +20,7 @@ pipeline{
         stage('Run App'){
             steps{
                 bat '''
-                    call venv\Scripts\activate
+                    call venv/Scripts/activate
                     pytest
                 '''
             }
