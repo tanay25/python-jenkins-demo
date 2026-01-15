@@ -1,5 +1,5 @@
 pipeline{
-    agen any
+    agent any
 
     stages {
         stage('Checkout'){
@@ -10,7 +10,7 @@ pipeline{
         stage('Setup Python') {
             steps {
                 bat '''
-                pythom -m venv venv
+                python -m venv venv
                 call venv/Scripts/activate
                 pip install -r requirements.txt
                 '''
